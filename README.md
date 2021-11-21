@@ -18,7 +18,7 @@ There was a significant difference in stock performance between 2017 and 2018. A
 ![2017_to_2018_StockPerformance](https://user-images.githubusercontent.com/93630042/142767828-08f1d8bb-6dd1-4545-a450-1dcf6b1e5d20.png)
 
 #### Change in Daily Trading Volume
-Between 2017 and 2018 there were changes in the daily trading volume totals. Seven (7) tickers had an increase in total daily trading voluume between 2017 and 2018 while five (5) had a decrease over the same time period. 
+Between 2017 and 2018 there were changes in the daily trading volume totals. Seven (7) tickers had an increase in total daily trading volume while five (5) had a decrease over the same time period. 
 
 While 7 tickers had an increase in daily volume, a total of 10 tickers had a decrease in return percentage. There was not a clear correlation between changes in daily trading volume totals and percentage return changes from 2017 to 2018. There were stocks that had a significant increase in total daily trading volume yet also a significant decrease in return. 
 - Example: Ticker "DQ" had a 201% increase in trading volume (from 35,796,200 in 2017 to 107,873,900 in 2018) yet a 262% decrease in return (from 199.4% in 2017 to -62.6% in 2018)
