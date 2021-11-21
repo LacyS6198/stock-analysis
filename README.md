@@ -1,2 +1,1 @@
-# stock-anaysis
-Bootcamp Module2
+# Data Analytics Bootcamp - Module 2 Challenge - Stock-Analysis
