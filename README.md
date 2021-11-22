@@ -117,3 +117,7 @@ Finally, the output portion of code was modified to be output arrays. These were
 ```       
 
 ## Summary
+
+### Code Refactoring - General - Advantages/Disadvantages
+
+### VBA Script Refactoring - Stock Analysis - Advantages/Disadvantages
