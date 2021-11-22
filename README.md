@@ -37,5 +37,21 @@ Further analysis would be required to determine why the stocks performed worse a
  - Category of stocks and average performance of stocks within each category for the given years to better determine if the performance was on-par for the stock type.
 
 ### Refactored Code Performance
+After creating the original analysis workbook, the code was refactored to decrease calculation time and improve performance. Performance was measured based on run time of the calculations. In order to determine improvement in timing, the worksheet was cleared and the original code was ran for the 2017 analysis. The worksheet was then cleared again and the refactored code was ran for the 2017 analysis. The process was then repeated the year 2018. The difference in timing was significantly improved after the refactoring. 
+- The 2017 analysis originally ran in 0.668 seconds. After refactoring, it ran in 0.102 seconds. This is an approximately 85% decrease in timing.
+- The 2018 analysis originally ran in 0.766 seconds. After refactoring, it ran in 0.117 seconds. This is an approximately 85% decrease in timing. 
+
+##### 2017 Run-Time Before Refactoring
+![RunTime_2017_OriginalCode](https://user-images.githubusercontent.com/93630042/142784577-dc692260-ad32-421a-a7e6-2fcb66117eb0.png)
+
+##### 2017 Run-Time After Refactoring
+![RunTime_2017_RefactoredCode](https://user-images.githubusercontent.com/93630042/142784581-312f9955-eebe-400b-b68a-f3b5b6577ece.png)
+
+##### 2018 Run-Time Before Refactoring
+![RunTime_2018_OriginalCode](https://user-images.githubusercontent.com/93630042/142784584-78174600-eeea-4ae3-9626-b2451cd0acd1.png)
+
+##### 2018 Run-Time After Refactoring
+![RunTime_2018_RefactoredCode](https://user-images.githubusercontent.com/93630042/142784589-8edae95c-39e3-4e80-a65f-b6ee4e3692ae.png)
+
 
 ## Summary
