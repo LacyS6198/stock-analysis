@@ -45,7 +45,7 @@ After creating the original analysis workbook, the code was refactored to decrea
 ![RunTime_2017_OriginalCode](https://user-images.githubusercontent.com/93630042/142784577-dc692260-ad32-421a-a7e6-2fcb66117eb0.png)
 
 ##### 2017 Run-Time After Refactoring
-![RunTime_2017_RefactoredCode](https://user-images.githubusercontent.com/93630042/142784581-312f9955-eebe-400b-b68a-f3b5b6577ece.png
+![RunTime_2017_RefactoredCode](https://user-images.githubusercontent.com/93630042/142784581-312f9955-eebe-400b-b68a-f3b5b6577ece.png)
 
 ##### 2018 Run-Time Before Refactoring
 ![RunTime_2018_OriginalCode](https://user-images.githubusercontent.com/93630042/142784584-78174600-eeea-4ae3-9626-b2451cd0acd1.png)
