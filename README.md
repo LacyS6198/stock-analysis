@@ -119,5 +119,13 @@ Finally, the output portion of code was modified to be output arrays. These were
 ## Summary
 
 ### Code Refactoring - General - Advantages/Disadvantages
+Code refactoring is used to make more efficient code. Efficiency is not only measured in run-time, but also in the flexibilty of the code to handle changes and/or growth in the dataset. 
+
+The first time code is written it may be very effective and "efficient enough" at the time. It can be deployed and run well for years. However, as datasets change or grow, it may need to be refactored. Refactoring is often done to improve the performance of the code. Long running code not only has negative effects on the end-user (long wait times!) but can also bog down the rest of the system as it takes up system power to execute. In some cases, this can cause slow downs across all users of the system including other applications and queries, employees and clients. Faster code is always an advantage! 
+
+Another advantage to refactoring is the improvement in flexibility of the code. Hard-coding of values within code may be effective at reaching the initial outcome but becomes cumbersome to maintain over time. Not only can maintenance become a nightmare, it can also cause problems. For example, if the code is originally written with hard-coded values but years later those values change without anyone knowing the code needs updating... well, you likely now have bugs in your production environment. Refactoring code keep it organized and variable to chagne as the business changes. 
+
+A major risk and/or disadvantage of code refactoring is doing so in a way that changes the intent and/or outcomes. In this challenge, my first attempt to refactor the code produced very different results than the original code due to an error. Testing, specifically before/after change regression testing, is required when refactoring code to ensure that the results are the same as the original (albeit with a faster run-time). For example, refactored code may run 99% faster than it originally did... because it's not doing anything and doesn't output any results. 
 
 ### VBA Script Refactoring - Stock Analysis - Advantages/Disadvantages
+
