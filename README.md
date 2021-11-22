@@ -42,7 +42,7 @@ After creating the original analysis workbook, the code was refactored to decrea
 - The 2018 analysis originally ran in 0.766 seconds. After refactoring, it ran in 0.117 seconds. This is an approximately 85% decrease in timing. 
 
 ##### 2017 Run-Time Before Refactoring
- <td>![RunTime_2017_OriginalCode](https://user-images.githubusercontent.com/93630042/142784577-dc692260-ad32-421a-a7e6-2fcb66117eb0.png)
+![RunTime_2017_OriginalCode](https://user-images.githubusercontent.com/93630042/142784577-dc692260-ad32-421a-a7e6-2fcb66117eb0.png)
 
 ##### 2017 Run-Time After Refactoring
 ![RunTime_2017_RefactoredCode](https://user-images.githubusercontent.com/93630042/142784581-312f9955-eebe-400b-b68a-f3b5b6577ece.png
