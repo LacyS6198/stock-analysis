@@ -22,7 +22,7 @@ Between 2017 and 2018 there were changes in the daily trading volume totals. Sev
 
 While 7 tickers had an increase in daily volume, a total of 10 tickers had a decrease in return percentage. There was not a clear correlation between changes in daily trading volume totals and percentage return changes from 2017 to 2018. There were stocks that had a significant increase in total daily trading volume yet also a significant decrease in return. 
 - Example: Ticker "DQ" had a 201% increase in trading volume (from 35,796,200 in 2017 to 107,873,900 in 2018) yet a 262% decrease in return (from 199.4% in 2017 to -62.6% in 2018)
-- Example: Ticker TERP had a 9% increase in trading volum (from 139,402,800 in 2017 to 151,434,700 in 2018) yet only a 2.2% increase in return (from -7.2% in 2017 to -5.0% in 2018).
+- Example: Ticker TERP had a 9% increase in trading volume (from 139,402,800 in 2017 to 151,434,700 in 2018) yet only a 2.2% increase in return (from -7.2% in 2017 to -5.0% in 2018).
 
 Based on the above two examples and an overall review of the 2017 and 2018 stock performances, we can see that the change in daily total volume did not seem to have a clear or direct impact on the percentage return.
 
@@ -54,7 +54,7 @@ After creating the original analysis workbook, the code was refactored to decrea
 ![RunTime_2018_RefactoredCode](https://user-images.githubusercontent.com/93630042/142784589-8edae95c-39e3-4e80-a65f-b6ee4e3692ae.png)
 
 #### Refactored Code Details
-The original code looped through the tickers to perform calculations. In the refactored code, a "tickerindex" was added. Three output arrays were then added along with a loop to resset the tickerVolume to 0 at the start of each new loop. 
+The original code looped through the tickers to perform calculations. In the refactored code, a "tickerindex" was added. Three output arrays were then added along with a loop to reset the tickerVolume to 0 at the start of each new loop. 
 
 ```
     '1a) Create a ticker Index
@@ -102,7 +102,7 @@ The loop to calculate the ticker volume, starting price and ending price was the
      Next i
 ```
 
-Finally, the output portion of code was modified to be output arrays. These were changed to loop through the tickerindex values found in the calcuations above and extract these to the "All Stocks Analysis" worksheet. 
+Finally, the output portion of code was modified to be output arrays. These were changed to loop through the tickerindex values found in the calculations above and extract these to the "All Stocks Analysis" worksheet. 
 
 ```
     For i = 0 To 11
@@ -119,13 +119,17 @@ Finally, the output portion of code was modified to be output arrays. These were
 ## Summary
 
 ### Code Refactoring - General - Advantages/Disadvantages
-Code refactoring is used to make more efficient code. Efficiency is not only measured in run-time, but also in the flexibilty of the code to handle changes and/or growth in the dataset. 
+Code refactoring is used to make more efficient code. Efficiency is not only measured in run-time, but also in the  flexibility of the code to handle changes and/or growth in the dataset. 
 
 The first time code is written it may be very effective and "efficient enough" at the time. It can be deployed and run well for years. However, as datasets change or grow, it may need to be refactored. Refactoring is often done to improve the performance of the code. Long running code not only has negative effects on the end-user (long wait times!) but can also bog down the rest of the system as it takes up system power to execute. In some cases, this can cause slow downs across all users of the system including other applications and queries, employees and clients. Faster code is always an advantage! 
 
-Another advantage to refactoring is the improvement in flexibility of the code. Hard-coding of values within code may be effective at reaching the initial outcome but becomes cumbersome to maintain over time. Not only can maintenance become a nightmare, it can also cause problems. For example, if the code is originally written with hard-coded values but years later those values change without anyone knowing the code needs updating... well, you likely now have bugs in your production environment. Refactoring code keep it organized and variable to chagne as the business changes. 
+Another advantage to refactoring is the improvement in flexibility of the code. Hard-coding of values within code may be effective at reaching the initial outcome but becomes cumbersome to maintain over time. Not only can maintenance become a nightmare, it can also cause problems. For example, if the code is originally written with hard-coded values but years later those values change without anyone knowing the code needs updating... well, you likely now have bugs in your production environment. Refactoring code keep it organized and variable to change as the business changes. 
 
 A major risk and/or disadvantage of code refactoring is doing so in a way that changes the intent and/or outcomes. In this challenge, my first attempt to refactor the code produced very different results than the original code due to an error. Testing, specifically before/after change regression testing, is required when refactoring code to ensure that the results are the same as the original (albeit with a faster run-time). For example, refactored code may run 99% faster than it originally did... because it's not doing anything and doesn't output any results. 
 
-### VBA Script Refactoring - Stock Analysis - Advantages/Disadvantages
+Another potential disadvantage is that the benefits of the refactoring (performance improvement, scalability of code) may not outweigh the cost of refactoring code (time to update & test). It is possible that a lot of effort will be put forth to modify the code without significant enough improvement, or sometimes no improvement at all. It is important to understand the purpose of the refactoring, the effort required, and anticipated benefits prior to starting the changes.
 
+### VBA Script Refactoring - Stock Analysis - Advantages/Disadvantages
+The original code seemed to run quickly until compared against the run-time of the refactored code. After seeing the significant performance improvement, it became clear that the original code was not nearly as efficient as it code have been. The data set being used for this project was not very large in comparison to datasets that exist in finance and other industries. If the original code had been applied to larger data sets, the run-time would increase exponentially and at some point, may not work well enough for the end user. 
+
+The disadvantage of refactoring the code was the time it took to complete the changes and test them along the way. It's important when refactoring code to understand the possible time savings and effort to make the updates. In some instances, the effect of refactoring my not be worth the time to do it. However, in this case there was clearly an advantage to refactoring the VBA code.
