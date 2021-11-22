@@ -71,6 +71,49 @@ The original code looped through the tickers to perform calculations. In the ref
         Next i
  ```
 
+The loop to calculate the ticker volume, starting price and ending price was then modified to use the new ticker index. Instead of comparing against the ticker itself, it now will use the tickerindex.
 
+```
+    For i = 2 To RowCount
+    
+        '3a) Increase volume for current ticker
+           
+            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+    
+        
+        '3b) Check if the current row is the first row with the selected tickerIndex.
+            
+            If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+            End If
+        
+        '3c) check if the current row is the last row with the selected ticker
+         'If the next rowâ€™s ticker doesnâ€™t match, increase the tickerIndex.
+
+            If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            End If
+            
+            '3d Increase the tickerIndex.
+            If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+            tickerIndex = tickerIndex + 1
+            End If
+
+     Next i
+```
+
+Finally, the output portion of code was modified to be output arrays. These were changed to loop through the tickerindex values found in the calcuations above and extract these to the "All Stocks Analysis" worksheet. 
+
+```
+    For i = 0 To 11
+        
+        Worksheets("All Stocks Analysis").Activate
+        
+        Cells(4 + i, 1).Value = tickers(i)
+        Cells(4 + i, 2).Value = tickerVolumes(i)
+        Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
+        
+    Next i
+```       
 
 ## Summary
