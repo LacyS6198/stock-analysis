@@ -53,5 +53,24 @@ After creating the original analysis workbook, the code was refactored to decrea
 ##### 2018 Run-Time After Refactoring
 ![RunTime_2018_RefactoredCode](https://user-images.githubusercontent.com/93630042/142784589-8edae95c-39e3-4e80-a65f-b6ee4e3692ae.png)
 
+#### Refactored Code Details
+The original code looped through the tickers to perform calculations. In the refactored code, a "tickerindex" was added. Three output arrays were then added along with a loop to resset the tickerVolume to 0 at the start of each new loop. 
+
+```
+    '1a) Create a ticker Index
+        tickerIndex = 0
+    
+    '1b) Create three output arrays
+        Dim tickerVolumes(12) As Long
+        Dim tickerStartingPrices(12) As Single
+        Dim tickerEndingPrices(12) As Single
+    
+    ''2a) Create a for loop to initialize the tickerVolumes to zero.
+        For i = 0 To 11
+            tickerVolumes(i) = 0
+        Next i
+ ```
+
+
 
 ## Summary
